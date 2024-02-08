@@ -4,7 +4,7 @@
         <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
         <NeutralLanguage>en</NeutralLanguage>
         <CodeAnalysisRuleSet>$(SolutionDir)Global.ruleset</CodeAnalysisRuleSet>
-        <LangVersion>9.0</LangVersion>
+        <LangVersion>latest</LangVersion>
         <TypeScriptCompileBlocked>false</TypeScriptCompileBlocked>
     </PropertyGroup>
 
@@ -14,7 +14,7 @@
         
         <PackageReference Include="Lindhart.Analyser.MissingAwaitWarning" Version="2.*" Condition="$(MSBuildProjectExtension) == '.csproj'"/>
       
-        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1" Condition="$(MSBuildProjectExtension) == '.csproj'">
+        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.*" Condition="$(MSBuildProjectExtension) == '.csproj'">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
